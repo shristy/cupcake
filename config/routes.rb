@@ -1,4 +1,6 @@
 Cuppycake::Application.routes.draw do
+  resources :reviews
+
   resources :cupcakes
 
   # The priority is based upon order of creation: first created -> highest priority.

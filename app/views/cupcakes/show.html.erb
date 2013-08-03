@@ -10,5 +10,11 @@
   <%= @cupcake.price %>
 </p>
 
+<ul>
+  <% @cupcake.reviews.each do |review| %>
+  	<li><%= review.message %> - <%= review.reviewer %></li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_cupcake_path(@cupcake) %> |
 <%= link_to 'Back', cupcakes_path %>

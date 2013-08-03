@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Flavour</th>
       <th>Price</th>
       <th></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @cupcakes.each do |cupcake| %>
       <tr>
+        <td><%= cupcake.id %></td>
         <td><%= cupcake.flavour %></td>
         <td><%= cupcake.price %></td>
         <td><%= link_to 'Show', cupcake %></td>
