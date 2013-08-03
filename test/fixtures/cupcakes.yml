@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  flavour: MyString
+  price: 1.5
+
+two:
+  flavour: MyString
+  price: 1.5

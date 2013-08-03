@@ -1,0 +1,2 @@
+module CupcakesHelper
+end

@@ -1,0 +1,29 @@
+<h1>Listing cupcakes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Flavour</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cupcakes.each do |cupcake| %>
+      <tr>
+        <td><%= cupcake.flavour %></td>
+        <td><%= cupcake.price %></td>
+        <td><%= link_to 'Show', cupcake %></td>
+        <td><%= link_to 'Edit', edit_cupcake_path(cupcake) %></td>
+        <td><%= link_to 'Destroy', cupcake, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cupcake', new_cupcake_path %>

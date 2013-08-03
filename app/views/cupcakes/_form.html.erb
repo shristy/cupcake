@@ -1,0 +1,25 @@
+<%= form_for(@cupcake) do |f| %>
+  <% if @cupcake.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cupcake.errors.count, "error") %> prohibited this cupcake from being saved:</h2>
+
+      <ul>
+      <% @cupcake.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :flavour %><br>
+    <%= f.text_field :flavour %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
